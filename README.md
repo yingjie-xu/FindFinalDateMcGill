@@ -1,5 +1,7 @@
 # FindFinalDateMcGill
 
+![](https://img.shields.io/github/license/yingjie-xu/FindFinalDateMcGill)
+
 Help students at McGill University find their final exam dates.
 
 Here is the link to the [website](https://yingjie-xu.github.io/FindFinalDateMcGill/)
