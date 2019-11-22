@@ -47,7 +47,7 @@ class App extends Component {
         display += data["NOTE"][this.state.id]
       }
     } else {
-      display = "Invalid course! Please try again with the format \"XXXX(space)XXX\"!"
+      display = "Invalid course number! Please try again with the format \"XXXX(space)XXX\"!"
     }
     return (
       <div className="App">
