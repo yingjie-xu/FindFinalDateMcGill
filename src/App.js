@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import data from "./new1.json"
-import { Input, Col, Row } from 'antd'
+import { Input, Row, Icon } from 'antd'
 
 class App extends Component {
   constructor() {
@@ -20,8 +20,13 @@ class App extends Component {
 
   handleChange(event) {
     this.setState({value: event.target.value})
+    let query = event.target.value
+    .replace(/  +/g, ' ') //handle input with multiple space
+    .replace(/([A-z]{4})(\d)/, '$1 $2') //handle input without space
+    .toUpperCase(); 
+
     for (var k in data["COURSE NUMBER"]) {
-      if (data["COURSE NUMBER"][k] === event.target.value.toUpperCase()) {
+      if (data["COURSE NUMBER"][k] === query) {
         this.setState({
           isCourse: true,
           id: k
@@ -48,7 +53,7 @@ class App extends Component {
         display += data["NOTE"][this.state.id]
       }
     } else {
-      display = "Invalid course number! Please try again with the format \"XXXX(space)XXX\"!"
+      display = "Invalid course number! Please try again!"
     }
     return (
       <div className="App">
@@ -69,8 +74,9 @@ class App extends Component {
           </form>
           <h2>{display}</h2>
           <p>
-            Follow <a href="https://www.mcgill.ca/exams/">this </a>link to get precise info. 
-            Follow <a href="https://www.mcgill.ca/exams/buildings">this </a>link to get exam location.
+            Follow <a href="https://www.mcgill.ca/exams/" target='_blank' rel="noopener noreferrer">this </a>link to get precise info. 
+            Follow <a href="https://www.mcgill.ca/exams/buildings" target='_blank' rel="noopener noreferrer">this </a>link to get exam location.
+            View the project on <a href='https://github.com/yingjie-xu/FindFinalDateMcGill' target='_blank' rel="noopener noreferrer"><Icon type='github' /></a>
           </p>
         </Row>
       </div>
