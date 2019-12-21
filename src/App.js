@@ -20,8 +20,13 @@ class App extends Component {
 
   handleChange(event) {
     this.setState({value: event.target.value})
+    let query = event.target.value
+    .replace(/  +/g, ' ') //handle input with multiple space
+    .replace(/([A-z]{4})(\d)/, '$1 $2') //handle input without space
+    .toUpperCase(); 
+
     for (var k in data["COURSE NUMBER"]) {
-      if (data["COURSE NUMBER"][k] === event.target.value.toUpperCase()) {
+      if (data["COURSE NUMBER"][k] === query) {
         this.setState({
           isCourse: true,
           id: k
