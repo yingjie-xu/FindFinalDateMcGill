@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/FindFinalDateMcGill/precache-manifest.943cfd7a2a46bf7fd3f37f62244cd072.js"
+  "/FindFinalDateMcGill/precache-manifest.6582436d42c8c4cf6a807ee96165909e.js"
 );
 
 self.addEventListener('message', (event) => {
