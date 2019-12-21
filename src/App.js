@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './App.css';
 import data from "./new1.json"
+import { Input, Col, Row } from 'antd'
 
 class App extends Component {
   constructor() {
@@ -51,16 +52,27 @@ class App extends Component {
     }
     return (
       <div className="App">
-        <div className="bg"></div>
-        <form>
-          <h1>Find your final exam date (McGill Univeristy)</h1>
-          <h2>Enter Course Number: </h2><input type="text" value={this.state.value} onChange={this.handleChange}></input>
-        </form>
-        <h2>{display}</h2>
-        <p>
-          Follow <a href="https://www.mcgill.ca/exams/">this </a>link to get precise info. 
-          Follow <a href="https://www.mcgill.ca/exams/buildings">this </a>link to get exam location.
-        </p>
+        <Row>
+          <div className="bg"></div>
+          <form>
+            <h1>Find your final exam date (McGill Univeristy)</h1>
+            <h2>
+              Enter Course Number: {"\t"}
+              <Input 
+                type="text" 
+                value={this.state.value} 
+                onChange={this.handleChange}
+                placeholder='e.g. Math 240'
+                style={{ width: 200 }}
+              />
+            </h2>
+          </form>
+          <h2>{display}</h2>
+          <p>
+            Follow <a href="https://www.mcgill.ca/exams/">this </a>link to get precise info. 
+            Follow <a href="https://www.mcgill.ca/exams/buildings">this </a>link to get exam location.
+          </p>
+        </Row>
       </div>
     );
   }

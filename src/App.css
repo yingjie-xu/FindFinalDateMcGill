@@ -1,5 +1,19 @@
 .App {
-  text-align: center;
+    /* Sizing */
+    width: 100vw;
+    height: 100vh;
+    /* Flexbox stuff */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Text styles */
+    text-align: center;
+    /* Background styles */
+    background-image: linear-gradient(rgba(245, 253, 227, 0.8),rgb(198, 226, 195)), url('./mcgill.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 
 .App-logo {
