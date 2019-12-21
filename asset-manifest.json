@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/FindFinalDateMcGill/static/css/main.bf3ab490.chunk.css",
-    "main.js": "/FindFinalDateMcGill/static/js/main.d430208b.chunk.js",
-    "main.js.map": "/FindFinalDateMcGill/static/js/main.d430208b.chunk.js.map",
+    "main.css": "/FindFinalDateMcGill/static/css/main.02f478ed.chunk.css",
+    "main.js": "/FindFinalDateMcGill/static/js/main.b8046f45.chunk.js",
+    "main.js.map": "/FindFinalDateMcGill/static/js/main.b8046f45.chunk.js.map",
     "runtime-main.js": "/FindFinalDateMcGill/static/js/runtime-main.25032214.js",
     "runtime-main.js.map": "/FindFinalDateMcGill/static/js/runtime-main.25032214.js.map",
-    "static/css/2.5afbe43a.chunk.css": "/FindFinalDateMcGill/static/css/2.5afbe43a.chunk.css",
-    "static/js/2.082d70cd.chunk.js": "/FindFinalDateMcGill/static/js/2.082d70cd.chunk.js",
-    "static/js/2.082d70cd.chunk.js.map": "/FindFinalDateMcGill/static/js/2.082d70cd.chunk.js.map",
+    "static/css/2.c819ae28.chunk.css": "/FindFinalDateMcGill/static/css/2.c819ae28.chunk.css",
+    "static/js/2.188fcf67.chunk.js": "/FindFinalDateMcGill/static/js/2.188fcf67.chunk.js",
+    "static/js/2.188fcf67.chunk.js.map": "/FindFinalDateMcGill/static/js/2.188fcf67.chunk.js.map",
     "index.html": "/FindFinalDateMcGill/index.html",
-    "precache-manifest.6582436d42c8c4cf6a807ee96165909e.js": "/FindFinalDateMcGill/precache-manifest.6582436d42c8c4cf6a807ee96165909e.js",
+    "precache-manifest.1c88a77f0d7fb591ea04ffe6cd9bb888.js": "/FindFinalDateMcGill/precache-manifest.1c88a77f0d7fb591ea04ffe6cd9bb888.js",
     "service-worker.js": "/FindFinalDateMcGill/service-worker.js",
-    "static/css/2.5afbe43a.chunk.css.map": "/FindFinalDateMcGill/static/css/2.5afbe43a.chunk.css.map",
-    "static/css/main.bf3ab490.chunk.css.map": "/FindFinalDateMcGill/static/css/main.bf3ab490.chunk.css.map",
+    "static/css/2.c819ae28.chunk.css.map": "/FindFinalDateMcGill/static/css/2.c819ae28.chunk.css.map",
+    "static/css/main.02f478ed.chunk.css.map": "/FindFinalDateMcGill/static/css/main.02f478ed.chunk.css.map",
     "static/media/App.css": "/FindFinalDateMcGill/static/media/mcgill.9763900c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.25032214.js",
-    "static/css/2.5afbe43a.chunk.css",
-    "static/js/2.082d70cd.chunk.js",
-    "static/css/main.bf3ab490.chunk.css",
-    "static/js/main.d430208b.chunk.js"
+    "static/css/2.c819ae28.chunk.css",
+    "static/js/2.188fcf67.chunk.js",
+    "static/css/main.02f478ed.chunk.css",
+    "static/js/main.b8046f45.chunk.js"
   ]
 }
