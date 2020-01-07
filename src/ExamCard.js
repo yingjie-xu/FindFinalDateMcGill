@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "antd/dist/antd.css";
 import { Card, Col} from "antd";
 // <Row gutter={[24, 24]}>
 //TODO: make card content prettier, add icons or grids
