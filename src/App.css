@@ -9,7 +9,7 @@
   /* Text styles */
   text-align: center;
   /* Background styles */
-  background-image: linear-gradient(rgba(245, 253, 227, 0.8),rgba(226, 201, 191, 0.774)), url('./mcgill.jpg');
+  background-image: linear-gradient(rgba(245, 253, 227, 0.8),rgba(226, 201, 191, 0.774)), url('./Assets/mcgill.jpg');
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;

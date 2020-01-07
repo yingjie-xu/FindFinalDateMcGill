@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import { Form, Input, Icon, Button } from 'antd';
-import data from "./washed.json"
+import data from "./Assets/washed.json"
 
 let id = 0;
 
