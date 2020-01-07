@@ -1,78 +1,23 @@
 import React, {Component} from 'react';
 import './App.css';
-import data from "./new1.json"
-import { Input, Row, Icon } from 'antd'
+import { Input, Row, Icon, Col, Select } from 'antd'
+
+const { Option } = Select;
 
 class App extends Component {
-  constructor() {
-    super()
-    this.state = {
-      value: "",
-      course: false,
-      id: undefined
-    }
-    this.handleChange = this.handleChange.bind(this)
-  }
-  
-  componentDidMount() {
-    document.title = "Find Exam Date McGill";
-  }
-
-  handleChange(event) {
-    this.setState({value: event.target.value})
-    let query = event.target.value
-    .replace(/  +/g, ' ') //handle input with multiple space
-    .replace(/([A-z]{4})(\d)/, '$1 $2') //handle input without space
-    .toUpperCase(); 
-
-    for (var k in data["COURSE NUMBER"]) {
-      if (data["COURSE NUMBER"][k] === query) {
-        this.setState({
-          isCourse: true,
-          id: k
-        })
-        break
-      } else {
-        this.setState({isCourse: false})
-      }
-    }
-  }
-
   render() {
-    let display = undefined
-    if (this.state.isCourse) {
-      display = "The Final Exam of "
-      display += data["COURSE NUMBER"][this.state.id]
-      display += " will be held on "
-      display += data["EXAM DATE"][this.state.id]
-      display += " at "
-      display += data["TIME"][this.state.id]
-      display += ". "
-      if (data["NOTE"][this.state.id]) {
-        display += "Note: "
-        display += data["NOTE"][this.state.id]
-      }
-    } else {
-      display = "Invalid course number! Please try again!"
-    }
     return (
-      <div className="App">
+      <div className="App"> 
         <Row>
-          <div className="bg"></div>
-          <form>
-            <h1>Find your final exam date (McGill Univeristy)</h1>
-            <h2>
-              Enter Course Number: {"\t"}
-              <Input 
-                type="text" 
-                value={this.state.value} 
-                onChange={this.handleChange}
-                placeholder='e.g. Math 240'
-                style={{ width: 200 }}
-              />
-            </h2>
-          </form>
-          <h2>{display}</h2>
+          <h1>Find your final exam date (McGill Univeristy)</h1>
+          <Select
+            mode="multiple"
+            placeholder="..."
+          >
+            <Option value="red">Red</Option>
+            <Option value="green">Green</Option>
+            <Option value="blue">Blue</Option>
+          </Select>
           <p>
             Follow <a href="https://www.mcgill.ca/exams/" target='_blank' rel="noopener noreferrer">this </a>link to get precise info. 
             Follow <a href="https://www.mcgill.ca/exams/buildings" target='_blank' rel="noopener noreferrer">this </a>link to get exam location.
