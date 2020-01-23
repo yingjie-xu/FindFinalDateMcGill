@@ -12,8 +12,14 @@
 
 .app h1{
   text-align: center;
+  padding-top: 30px;
+  background-color: rgba(245, 253, 227, 0.1);
 }
 
 .app p{
+  text-align: center;
+}
+
+.app #input {
   text-align: center;
 }

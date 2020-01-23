@@ -64,10 +64,6 @@ class DynamicFieldSet extends Component {
   render() {
     const { getFieldDecorator, getFieldValue } = this.props.form;
     const formItemLayout = {
-      labelCol: {
-        xs: { span: 24 },
-        sm: { span: 4 },
-      },
       wrapperCol: {
         xs: { span: 24 },
         sm: { span: 20 },
@@ -76,7 +72,7 @@ class DynamicFieldSet extends Component {
     const formItemLayoutWithOutLabel = {
       wrapperCol: {
         xs: { span: 24, offset: 0 },
-        sm: { span: 20, offset: 4 },
+        sm: { span: 20, offset: 0 },
       },
     };
     getFieldDecorator('keys', { initialValue: [] });
@@ -84,7 +80,6 @@ class DynamicFieldSet extends Component {
     const formItems = keys.map((k, index) => (
       <Form.Item
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
-        label={index === 0 ? 'Courses' : ''}
         required={false}
         key={k}
       >
@@ -97,7 +92,7 @@ class DynamicFieldSet extends Component {
               message: "Please input course's name or delete this field.",
             },
           ],
-        })(<Input placeholder="course name" style={{ width: '65%', marginRight: 8 }} />)}
+        })(<Input placeholder="course name" style={{ width: '80%'}} />)}
         {keys.length > 1 ? (
           <Icon
             className="dynamic-delete-button"
@@ -109,24 +104,24 @@ class DynamicFieldSet extends Component {
     ));
     return (
       <Row>
-      <Col span={12}>
-      <Form onSubmit={this.handleSubmit}>
-        {formItems}
-        <Form.Item {...formItemLayoutWithOutLabel}>
-          <Button type="dashed" onClick={this.add} style={{ width: '65%' }}>
-            <Icon type="plus" /> Add field
-          </Button>
-        </Form.Item>
-        <Form.Item {...formItemLayoutWithOutLabel}>
-          <Button type="primary" htmlType="submit">
-            Submit
-          </Button>
-        </Form.Item>
-      </Form>
-      </Col>
-      <Col span={12}>
-      <Cards courses = {arr} />
-      </Col>
+        <Col md={8} xs={24}>
+          <Form onSubmit={this.handleSubmit}>
+            {formItems}
+            <Form.Item {...formItemLayoutWithOutLabel}>
+              <Button type="dashed" onClick={this.add} style={{ width: '80%' }}>
+                <Icon type="plus" /> Add Course
+              </Button>
+            </Form.Item>
+            <Form.Item {...formItemLayoutWithOutLabel}>
+              <Button type="primary" htmlType="submit">
+                Submit
+              </Button>
+            </Form.Item>
+          </Form>
+        </Col>
+        <Col md={16} xs={24}>
+          <Cards courses = {arr} />
+        </Col>
       </Row>
     );
   }

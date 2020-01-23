@@ -22,3 +22,5 @@ class ExportToCalendar extends Component{
         )
     }
 }
+
+export default ExportToCalendar;

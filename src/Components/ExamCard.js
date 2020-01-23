@@ -6,8 +6,8 @@ class ExamCard extends Component{
     render(){
     const {course} = this.props;
         return(
-            <Col md={12} xs={24}>
-                <Card title={`${ course["COURSE NUMBER"] } ${course["TITLE"]} ${course["SECTION"]}`} bordered={false}>
+            <Col lg={12} md={24} style={{padding:'10px'}}>
+                <Card title={`${ course["COURSE NUMBER"] }-${course["SECTION"]} ${course["TITLE"]}`} bordered={true}>
                     {course["EXAM DATE"]} {course["TIME"]} at {course["BUILDING"]} {course["ROOM"]} 
                     <br />
                     Row {course["ROW"]} From {course["FROM"]} To {course["TO"]}
