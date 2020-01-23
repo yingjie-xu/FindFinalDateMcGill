@@ -1,8 +1,10 @@
 import React, {Component} from 'react';
-import { Form, Input, Icon, Button } from 'antd';
-import data from "./Assets/washed.json"
+import Cards from './Cards';
+import { Form, Input, Icon, Button, Row, Col } from 'antd';
+import data from "../Assets/washed.json";
 
 let id = 0;
+let arr = [];
 
 class DynamicFieldSet extends Component {
   remove = k => {
@@ -40,23 +42,19 @@ class DynamicFieldSet extends Component {
         console.log('Received values of form: ', values);
         console.log('Merged values:', keys.map(key => names[key]));
         let list = keys.map(key => names[key]);
+        
         list.forEach(entry => {
           // if entry exists
-          entry = entry.replace(/  +/g, ' ') //handle input with multiple space
+          arr.push(entry.replace(/  +/g, ' ') //handle input with multiple space
             .replace(/([A-z]{4})(\d)/, '$1 $2') //handle input without space
-            .toUpperCase(); 
-          
-          let isCourse = false;
-
-          for (let index in data) {
-            if (data[index][entry]) {
-              isCourse = true;
-              console.log(data[index][entry])
-            } 
-          }
-          
+            .toUpperCase()); 
         });
-
+        console.log(arr)
+        let courses = data.map(e => e['COURSE NUMBER']);
+        arr = arr.filter(e => {
+          return courses.includes(e);
+        })
+        console.log(arr);
       }
     });
   };
@@ -87,7 +85,6 @@ class DynamicFieldSet extends Component {
       <Form.Item
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
         label={index === 0 ? 'Courses' : ''}
-        hasFeedback
         required={false}
         key={k}
       >
@@ -111,6 +108,8 @@ class DynamicFieldSet extends Component {
       </Form.Item>
     ));
     return (
+      <Row>
+      <Col span={12}>
       <Form onSubmit={this.handleSubmit}>
         {formItems}
         <Form.Item {...formItemLayoutWithOutLabel}>
@@ -124,6 +123,11 @@ class DynamicFieldSet extends Component {
           </Button>
         </Form.Item>
       </Form>
+      </Col>
+      <Col span={12}>
+      <Cards courses = {arr} />
+      </Col>
+      </Row>
     );
   }
 }
