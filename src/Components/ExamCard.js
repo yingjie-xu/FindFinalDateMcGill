@@ -8,9 +8,10 @@ class ExamCard extends Component{
         return(
             <Col lg={12} md={24} style={{padding:'10px'}}>
                 <Card title={`${ course["COURSE NUMBER"] }-${course["SECTION"]} ${course["TITLE"]}`} bordered={true}>
-                    {course["EXAM DATE"]} {course["TIME"]} at {course["BUILDING"]} {course["ROOM"]} 
+                    {course["EXAM DATE"]} {course["TIME"]} 
+                    {/* at {course["BUILDING"]} {course["ROOM"]} 
                     <br />
-                    Row {course["ROW"]} From {course["FROM"]} To {course["TO"]}
+                    Row {course["ROW"]} From {course["FROM"]} To {course["TO"]} */}
                 </Card>
             </Col>
         )

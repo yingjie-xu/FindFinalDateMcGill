@@ -11,11 +11,21 @@ class ExportToCalendar extends Component{
     exams.map((exam) => //add exams to calendar
     {
       let [course, section, building, row, date, time] = exam;
-      const startTime = new Date(date.concat(time));
-      const endTime = new Date(startTime);
+      let startTime = new Date(date.concat(time));
+      let endTime = new Date(startTime);
+      
+      // following lines are used for first released schedule
+      var today = new Date();
+      var year = today.getFullYear();
+      startTime.setYear(year);
+      endTime.setYear(year); 
+      //
+      
       endTime.setHours(startTime.getHours()+3); //exams are 3 hours
       //addEvent(subject, description, location, begin, end)
-      cal.addEvent(course.concat('-', section),'Final Exam', building.concat(row), startTime, endTime);
+      cal.addEvent(course.concat('-', section,' FINAL EXAM'),'Final Exam'.concat(' of ',course,'-', section),null, startTime, endTime);
+      // building.concat(row), 
+      // replace the null by the line above if location exists
     });
     let downloadCal = ()=>cal.download();
         return(
