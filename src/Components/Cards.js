@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import data from "../Assets/washed.json";
 import ExamCard from "./ExamCard.js";
+import ExportToCalendar from "./ExportToCalendar.js";
 // import ExportToCalendar from "../ExportToCalendar";
 
 class Cards extends Component{
@@ -10,7 +11,15 @@ class Cards extends Component{
       course_list = data.filter(course => {
         return courses.includes(course['COURSE NUMBER']);
       })
-      console.log(course_list)
+      console.log(course_list);
+      let examList = course_list.map(
+        c => [c["COURSE NUMBER"],
+        c["SECTION"],
+        c["BUILDING"],
+        c["ROW"],
+        c["EXAM DATE"],
+        c["TIME"]]
+        );
       return (
         <div>
           {course_list.length === 0 ? 
@@ -28,7 +37,7 @@ class Cards extends Component{
             : <div></div>
           }
           {course_list.map(course => <ExamCard course={course} key={course['COURSE NUMBER'] + course["SECTION"] + course["ROW"]}/>)}
-          {/* <ExportToCalendar exams={course_list}/> */}
+          <ExportToCalendar exams = {examList}></ExportToCalendar>
         </div>
       )
     }
