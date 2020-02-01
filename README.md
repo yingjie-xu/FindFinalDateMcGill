@@ -2,7 +2,7 @@
 
 [![License](https://img.shields.io/github/license/yingjie-xu/FindFinalDateMcGill)](https://github.com/yingjie-xu/FindFinalDateMcGill/blob/master/LICENSE)
 
-Help students at McGill University to find their final exam dates. Follow this [link](https://yingjie-xu.github.io/FindFinalDateMcGill/) to visit the website.
+Help students at McGill University to find their final exam dates. [Link to the website](https://yingjie-xu.github.io/FindFinalDateMcGill/)
 
 ### Background
 
