@@ -1,7 +1,5 @@
-//if this doesn't work, change to https://www.npmjs.com/package/ics
-import {saveAs} from 'file-saver';
-//npm i file-saver@1.3.2 --save
-/* exported ics */
+/* global saveAs, Blob, console */
+import { saveAs } from 'file-saver';
 
 export let ics = function(uidDomain, prodId) {
   'use strict';
@@ -254,13 +252,9 @@ export let ics = function(uidDomain, prodId) {
       var calendar = calendarStart + SEPARATOR + calendarEvents.join(SEPARATOR) + calendarEnd;
 
       var blob;
-      if (navigator.userAgent.indexOf('MSIE 10') === -1) { // chrome or firefox
-        blob = new Blob([calendar]);
-      } else { // ie
-        var bb = new BlobBuilder();
-        bb.append(calendar);
-        blob = bb.getBlob('text/x-vCalendar;charset=' + document.characterSet);
-      }
+      // chrome or firefox
+      blob = new Blob([calendar]);
+      
       saveAs(blob, filename + ext);
       return calendar;
     },
