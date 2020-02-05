@@ -35,6 +35,7 @@ class DynamicFieldSet extends Component {
   };
 
   handleSubmit = e => {
+    arr = [];
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
@@ -100,8 +101,6 @@ class DynamicFieldSet extends Component {
         ) : null}
       </Form.Item>
     ));
-    let copy = [...arr];
-    arr = [];
     return (
       <Row>
         <Col md={8} xs={24}>
@@ -120,7 +119,7 @@ class DynamicFieldSet extends Component {
           </Form>
         </Col>
         <Col md={16} xs={24}>
-          <Cards courses = {copy} />
+          <Cards courses = {arr} />
         </Col>
       </Row>
     );
