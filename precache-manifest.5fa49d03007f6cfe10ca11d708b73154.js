@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "5afb9edf1760b0d22e340137a9b2074e",
+    "revision": "9a10baed829568934a5f821ca45554b2",
     "url": "/FindFinalDateMcGill/index.html"
   },
   {
@@ -8,15 +8,15 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/FindFinalDateMcGill/static/css/2.83195336.chunk.css"
   },
   {
-    "revision": "08382f25e40dbb8ac213",
-    "url": "/FindFinalDateMcGill/static/css/main.334eff33.chunk.css"
+    "revision": "4b4de460be2c87ed3aea",
+    "url": "/FindFinalDateMcGill/static/css/main.4838ee3f.chunk.css"
   },
   {
     "revision": "c027cc8b573b4c0ece3e",
     "url": "/FindFinalDateMcGill/static/js/2.af1c7c8d.chunk.js"
   },
   {
-    "revision": "08382f25e40dbb8ac213",
+    "revision": "4b4de460be2c87ed3aea",
     "url": "/FindFinalDateMcGill/static/js/main.865ab9d0.chunk.js"
   },
   {

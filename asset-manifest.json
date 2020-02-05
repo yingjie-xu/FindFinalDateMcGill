@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/FindFinalDateMcGill/static/css/main.334eff33.chunk.css",
+    "main.css": "/FindFinalDateMcGill/static/css/main.4838ee3f.chunk.css",
     "main.js": "/FindFinalDateMcGill/static/js/main.865ab9d0.chunk.js",
     "main.js.map": "/FindFinalDateMcGill/static/js/main.865ab9d0.chunk.js.map",
     "runtime-main.js": "/FindFinalDateMcGill/static/js/runtime-main.95d6f199.js",
@@ -9,17 +9,17 @@
     "static/js/2.af1c7c8d.chunk.js": "/FindFinalDateMcGill/static/js/2.af1c7c8d.chunk.js",
     "static/js/2.af1c7c8d.chunk.js.map": "/FindFinalDateMcGill/static/js/2.af1c7c8d.chunk.js.map",
     "index.html": "/FindFinalDateMcGill/index.html",
-    "precache-manifest.d461e7ce802e698affe18072254ce8ac.js": "/FindFinalDateMcGill/precache-manifest.d461e7ce802e698affe18072254ce8ac.js",
+    "precache-manifest.5fa49d03007f6cfe10ca11d708b73154.js": "/FindFinalDateMcGill/precache-manifest.5fa49d03007f6cfe10ca11d708b73154.js",
     "service-worker.js": "/FindFinalDateMcGill/service-worker.js",
     "static/css/2.83195336.chunk.css.map": "/FindFinalDateMcGill/static/css/2.83195336.chunk.css.map",
-    "static/css/main.334eff33.chunk.css.map": "/FindFinalDateMcGill/static/css/main.334eff33.chunk.css.map",
+    "static/css/main.4838ee3f.chunk.css.map": "/FindFinalDateMcGill/static/css/main.4838ee3f.chunk.css.map",
     "static/media/App.css": "/FindFinalDateMcGill/static/media/mcgill.78542602.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.95d6f199.js",
     "static/css/2.83195336.chunk.css",
     "static/js/2.af1c7c8d.chunk.js",
-    "static/css/main.334eff33.chunk.css",
+    "static/css/main.4838ee3f.chunk.css",
     "static/js/main.865ab9d0.chunk.js"
   ]
 }
