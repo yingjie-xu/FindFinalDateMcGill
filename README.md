@@ -1,8 +1,11 @@
 # FindFinalDateMcGill
 
-[![License](https://img.shields.io/github/license/yingjie-xu/FindFinalDateMcGill)](https://github.com/yingjie-xu/FindFinalDateMcGill/blob/master/LICENSE)
+![UI](https://github.com/yingjie-xu/FindFinalDateMcGill/blob/master/doc/ui.png?raw=true)
+[Try now!](https://yingjie-xu.github.io/FindFinalDateMcGill/) This webapp helps McGill students to easily 
+- find the time and location of your final exams
+- add all your exams to calender at one-click 
 
-Help students at McGill University to find their final exam dates. [Link to the website](https://yingjie-xu.github.io/FindFinalDateMcGill/)
+
 
 ### Background
 
@@ -10,7 +13,8 @@ Students need to find their own final exam date through a pdf file of 26 pages. 
 
 ### Features
 - search the final exam date for multiple courses at a time
-- support export to calendar (i.e. generate the .ics file)
+- support export exams to calendar (i.e. generate the .ics file)
+<img src="https://github.com/yingjie-xu/FindFinalDateMcGill/blob/master/doc/ics.png?raw=true" alt="ics" width="50"> (Supports Google/Apple/Office Calendar )
 
 ### Data
 
@@ -19,3 +23,7 @@ Students need to find their own final exam date through a pdf file of 26 pages. 
 
 ### React
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+
+[![License](https://img.shields.io/github/license/yingjie-xu/FindFinalDateMcGill)](https://github.com/yingjie-xu/FindFinalDateMcGill/blob/master/LICENSE)
