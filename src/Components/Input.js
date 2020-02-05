@@ -74,7 +74,7 @@ class DynamicFieldSet extends Component {
         sm: { span: 20, offset: 0 },
       },
     };
-    getFieldDecorator('keys', { initialValue: [] });
+    getFieldDecorator('keys', { initialValue: [-1] });
     const keys = getFieldValue('keys');
     const formItems = keys.map((k, index) => (
       <Form.Item
