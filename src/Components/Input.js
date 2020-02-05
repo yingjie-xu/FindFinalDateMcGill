@@ -49,7 +49,7 @@ class DynamicFieldSet extends Component {
             .replace(/([A-z]{4})(\d)/, '$1 $2') //handle input without space
             .toUpperCase()); 
         });
-        console.log(arr)
+        //console.log(arr)
         let courses = data.map(e => e['COURSE NUMBER']);
         arr = arr.filter(e => {
           return courses.includes(e);
@@ -58,8 +58,6 @@ class DynamicFieldSet extends Component {
       }
     });
   };
-
-
 
   render() {
     const { getFieldDecorator, getFieldValue } = this.props.form;
@@ -102,6 +100,8 @@ class DynamicFieldSet extends Component {
         ) : null}
       </Form.Item>
     ));
+    let copy = [...arr];
+    arr = [];
     return (
       <Row>
         <Col md={8} xs={24}>
@@ -120,7 +120,7 @@ class DynamicFieldSet extends Component {
           </Form>
         </Col>
         <Col md={16} xs={24}>
-          <Cards courses = {arr} />
+          <Cards courses = {copy} />
         </Col>
       </Row>
     );
