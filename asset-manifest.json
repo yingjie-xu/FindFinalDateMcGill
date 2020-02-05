@@ -1,25 +1,25 @@
 {
   "files": {
     "main.css": "/FindFinalDateMcGill/static/css/main.5bec0469.chunk.css",
-    "main.js": "/FindFinalDateMcGill/static/js/main.e30d9e06.chunk.js",
-    "main.js.map": "/FindFinalDateMcGill/static/js/main.e30d9e06.chunk.js.map",
+    "main.js": "/FindFinalDateMcGill/static/js/main.90766204.chunk.js",
+    "main.js.map": "/FindFinalDateMcGill/static/js/main.90766204.chunk.js.map",
     "runtime-main.js": "/FindFinalDateMcGill/static/js/runtime-main.95d6f199.js",
     "runtime-main.js.map": "/FindFinalDateMcGill/static/js/runtime-main.95d6f199.js.map",
-    "static/css/2.83195336.chunk.css": "/FindFinalDateMcGill/static/css/2.83195336.chunk.css",
-    "static/js/2.0f26fffb.chunk.js": "/FindFinalDateMcGill/static/js/2.0f26fffb.chunk.js",
-    "static/js/2.0f26fffb.chunk.js.map": "/FindFinalDateMcGill/static/js/2.0f26fffb.chunk.js.map",
+    "static/css/2.e947e1df.chunk.css": "/FindFinalDateMcGill/static/css/2.e947e1df.chunk.css",
+    "static/js/2.1c54c202.chunk.js": "/FindFinalDateMcGill/static/js/2.1c54c202.chunk.js",
+    "static/js/2.1c54c202.chunk.js.map": "/FindFinalDateMcGill/static/js/2.1c54c202.chunk.js.map",
     "index.html": "/FindFinalDateMcGill/index.html",
-    "precache-manifest.87847447a404ba51032c8568fda30686.js": "/FindFinalDateMcGill/precache-manifest.87847447a404ba51032c8568fda30686.js",
+    "precache-manifest.1bd06be8b001cbc4493d7d6581e22c84.js": "/FindFinalDateMcGill/precache-manifest.1bd06be8b001cbc4493d7d6581e22c84.js",
     "service-worker.js": "/FindFinalDateMcGill/service-worker.js",
-    "static/css/2.83195336.chunk.css.map": "/FindFinalDateMcGill/static/css/2.83195336.chunk.css.map",
+    "static/css/2.e947e1df.chunk.css.map": "/FindFinalDateMcGill/static/css/2.e947e1df.chunk.css.map",
     "static/css/main.5bec0469.chunk.css.map": "/FindFinalDateMcGill/static/css/main.5bec0469.chunk.css.map",
     "static/media/App.css": "/FindFinalDateMcGill/static/media/mcgill.9763900c.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.95d6f199.js",
-    "static/css/2.83195336.chunk.css",
-    "static/js/2.0f26fffb.chunk.js",
+    "static/css/2.e947e1df.chunk.css",
+    "static/js/2.1c54c202.chunk.js",
     "static/css/main.5bec0469.chunk.css",
-    "static/js/main.e30d9e06.chunk.js"
+    "static/js/main.90766204.chunk.js"
   ]
 }
