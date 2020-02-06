@@ -58,6 +58,7 @@ class DynamicFieldSet extends Component {
         // console.log(arr);
       }
     });
+    this.add();
   };
 
   render() {
@@ -86,7 +87,7 @@ class DynamicFieldSet extends Component {
           validateTrigger: ['onChange', 'onBlur'],
           rules: [
             {
-              required: true,
+              required: false,
               whitespace: true,
               message: "Please input course's name or delete this field.",
             },
