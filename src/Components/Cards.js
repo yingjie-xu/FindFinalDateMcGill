@@ -11,7 +11,7 @@ class Cards extends Component{
       course_list = data.filter(course => {
         return courses.includes(course['COURSE NUMBER']);
       })
-      console.log(course_list);
+      // console.log(course_list);
       let examList = course_list.map(
         c => [c["COURSE NUMBER"],
         c["SECTION"],
@@ -30,14 +30,17 @@ class Cards extends Component{
                   <br/>Type in your courses (e.g. comp 202)
                   <br/>Click the "submit" button
                   <br/>View your final schedule
+                  <br/>Export exam dates to calendar
                   <br/>Note: Invalid courses will be ignored
                 </p>
               </h3>
             </div> 
-            : <div></div>
+            : <div>
+              {course_list.map(course => <ExamCard course={course} key={course['COURSE NUMBER'] + course["SECTION"] + course["ROW"]}/>)}
+              <ExportToCalendar exams = {examList}></ExportToCalendar>
+            </div>
           }
-          {course_list.map(course => <ExamCard course={course} key={course['COURSE NUMBER'] + course["SECTION"] + course["ROW"]}/>)}
-          <ExportToCalendar exams = {examList}></ExportToCalendar>
+          
         </div>
       )
     }
