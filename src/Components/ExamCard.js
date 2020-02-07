@@ -9,10 +9,14 @@ class ExamCard extends Component{
             <Col lg={12} md={24} style={{padding:'10px'}}>
                 <Card title={`${ course["COURSE NUMBER"] }-${course["SECTION"]} ${course["TITLE"]}`} bordered={true}>
                     <Icon type="clock-circle" /> &nbsp;
-                    {course["EXAM DATE"]} {course["TIME"]} 
-                    {/* <Icon type="home" />&nbsp; {course["BUILDING"]} {course["ROOM"]} 
+                    {course["EXAM DATE"]} {course["TIME"]}
                     <br />
-                    Row {course["ROW"]} From {course["FROM"]} To {course["TO"]} */}
+                    <Icon type="home" /> Building & Room: Coming Soon!
+                    {
+                    /* <Icon type="home" />&nbsp; {course["BUILDING"]} {course["ROOM"]} 
+                    <br />
+                    Row {course["ROW"]} From {course["FROM"]} To {course["TO"]} */
+                    }
                 </Card>
             </Col>
         )       
