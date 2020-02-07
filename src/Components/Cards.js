@@ -27,6 +27,7 @@ class Cards extends Component{
               <h2>Instructions: </h2>
               <h3>
                 <p>Start by click the "add course" button
+                  <br/>OR add the course by using ArrowDown key
                   <br/>Type in your courses (e.g. comp 202)
                   <br/>Click the "submit" button
                   <br/>View your final schedule

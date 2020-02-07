@@ -60,6 +60,20 @@ class DynamicFieldSet extends Component {
     });
   };
 
+  componentDidMount() {
+    document.addEventListener("keydown", this.handleKeyPress);
+  }
+
+  componentWillUnmount() {
+    document.removeEventListener("keydown", this.handleKeyPress);
+  }
+
+  handleKeyPress = e => {
+    if (e.key === "ArrowDown") {
+      this.add();
+    }
+  };
+
   render() {
     const { getFieldDecorator, getFieldValue } = this.props.form;
     const formItemLayout = {
@@ -107,7 +121,12 @@ class DynamicFieldSet extends Component {
           <Form onSubmit={this.handleSubmit}>
             {formItems}
             <Form.Item {...formItemLayoutWithOutLabel}>
-              <Button type="dashed" onClick={this.add} style={{ width: '80%' }}>
+              <Button 
+                type="dashed" 
+                onClick={this.add}
+                onKeyDown={this.handleKeyPress} 
+                style={{ width: '80%' }}
+              >
                 <Icon type="plus" /> Add Course
               </Button>
             </Form.Item>
