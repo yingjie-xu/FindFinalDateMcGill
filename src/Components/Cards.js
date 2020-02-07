@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import data from "../Assets/washed.json";
 import ExamCard from "./ExamCard.js";
-import ExportToCalendar from "./ExportToCalendar.js";
+import Selector from "./Selector.js";
 // import ExportToCalendar from "../ExportToCalendar";
 
 class Cards extends Component{
@@ -12,17 +12,9 @@ class Cards extends Component{
         return courses.includes(course['COURSE NUMBER']);
       })
       // console.log(course_list);
-      let examList = course_list.map(
-        c => [c["COURSE NUMBER"],
-        c["SECTION"],
-        c["BUILDING"],
-        c["ROW"],
-        c["EXAM DATE"],
-        c["TIME"]]
-        );
       return (
         <div>
-          {course_list.length === 0 ? 
+            {course_list.length === 0 ? 
             <div>
               <h2>Instructions: </h2>
               <h3>
@@ -38,7 +30,7 @@ class Cards extends Component{
             </div> 
             : <div>
               {course_list.map(course => <ExamCard course={course} key={course['COURSE NUMBER'] + course["SECTION"] + course["ROW"]}/>)}
-              <ExportToCalendar exams = {examList}></ExportToCalendar>
+              <Selector courses={course_list}/>
             </div>
           }
           

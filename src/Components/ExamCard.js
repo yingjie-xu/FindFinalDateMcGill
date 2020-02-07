@@ -4,7 +4,7 @@ import { Card, Col, Icon} from "antd";
 //TODO: make card content prettier, add icons or grids
 class ExamCard extends Component{
     render(){
-    const {course} = this.props;
+        const {course} = this.props;
         return(
             <Col lg={12} md={24} style={{padding:'10px'}}>
                 <Card title={`${ course["COURSE NUMBER"] }-${course["SECTION"]} ${course["TITLE"]}`} bordered={true}>
@@ -15,9 +15,7 @@ class ExamCard extends Component{
                     Row {course["ROW"]} From {course["FROM"]} To {course["TO"]} */}
                 </Card>
             </Col>
-        )
-
-       
+        )       
     }
 }
 
