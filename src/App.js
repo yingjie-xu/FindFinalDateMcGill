@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './App.css';
-import { Icon } from 'antd'
+import { GithubOutlined } from '@ant-design/icons';
 import Input from './Components/Input';
 
 class App extends Component {
@@ -11,7 +11,7 @@ class App extends Component {
         <p>
           <a href="https://www.mcgill.ca/exams/" target='_blank' rel="noopener noreferrer">precise info </a> |
           <a href="https://www.mcgill.ca/exams/buildings" target='_blank' rel="noopener noreferrer"> exam location </a> |
-          <a href='https://github.com/yingjie-xu/FindFinalDateMcGill' target='_blank' rel="noopener noreferrer"> <Icon type='github' /> </a>
+          <a href='https://github.com/yingjie-xu/FindFinalDateMcGill' target='_blank' rel="noopener noreferrer"> <GithubOutlined /> </a>
         </p>
         <div id="input">
           <Input /> 

@@ -1,7 +1,9 @@
 import React, {Component} from 'react';
 import Cards from './Cards';
-import { Form, Input, Icon, Button, Row, Col } from 'antd';
-import data from "../Assets/washed.json";
+import { Form, Input, Button, Row, Col } from 'antd';
+import { Icon,PlusOutlined } from '@ant-design/icons';
+import {checkExist} from './checkExist';
+import {cleanInput} from './cleanInput';
 
 let id = 0;
 let arr = [];
@@ -46,15 +48,10 @@ class DynamicFieldSet extends Component {
         
         list.forEach(entry => {
           // if entry exists
-          arr.push(entry.replace(/  +/g, ' ') //handle input with multiple space
-            .replace(/([A-z]{4})(\d)/, '$1 $2') //handle input without space
-            .toUpperCase()); 
+          arr.push(cleanInput(entry)); 
         });
         //console.log(arr)
-        let courses = data.map(e => e['COURSE NUMBER']);
-        arr = arr.filter(e => {
-          return courses.includes(e);
-        })
+        arr = arr.filter(checkExist);
         // console.log(arr);
       }
     });
@@ -95,6 +92,7 @@ class DynamicFieldSet extends Component {
         {...(index === 0 ? formItemLayout : formItemLayoutWithOutLabel)}
         required={false}
         key={k}
+        hasFeedback
       >
         {getFieldDecorator(`names[${k}]`, {
           validateTrigger: ['onChange', 'onBlur'],
@@ -102,16 +100,21 @@ class DynamicFieldSet extends Component {
             {
               required: true,
               whitespace: true,
-              message: "Please input course's name or delete this field.",
+              message: "Please input a course number or delete this field.",
             },
+            {
+              validator(rule, value) {
+                value = cleanInput(value); 
+                if (!value || checkExist(value)){
+                  return Promise.resolve();
+                }
+                return Promise.reject('This course number does not exist!');
+              },
+            }
           ],
         })(<Input placeholder="course name" style={{ width: '80%'}} />)}
         {keys.length > 1 ? (
-          <Icon
-            className="dynamic-delete-button"
-            type="minus-circle-o"
-            onClick={() => this.remove(k)}
-          />
+          <MinusCircleOutlined className="dynamic-delete-button" onClick={() => this.remove(k)}/>
         ) : null}
       </Form.Item>
     ));
@@ -127,7 +130,7 @@ class DynamicFieldSet extends Component {
                 onKeyDown={this.handleKeyPress} 
                 style={{ width: '80%' }}
               >
-                <Icon type="plus" /> Add Course
+                <PlusOutlined /> Add Course
               </Button>
             </Form.Item>
             <Form.Item {...formItemLayoutWithOutLabel}>
